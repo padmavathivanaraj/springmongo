@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Detail</title>
+</head>
+<body>
+  <h2>Employee Details</h2>
+
+  <div th:if="${employee != null}">
+    <p><strong>Mongo ID:</strong> <span th:text="${employee.id}"></span></p>
+    <p><strong>Employee ID:</strong> <span th:text="${employee.employeeId}"></span></p>
+    <p><strong>Name:</strong> <span th:text="${employee.name}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${employee.email}"></span></p>
+    <p><strong>Location:</strong> <span th:text="${employee.location}"></span></p>
+  </div>
+
+  <div th:if="${employee == null}">
+    <p th:text="${message}">Employee not found</p>
+  </div>
+
+  <p><a th:href="@{/displayAll}">Back to list</a></p>
+</body>
+</html>

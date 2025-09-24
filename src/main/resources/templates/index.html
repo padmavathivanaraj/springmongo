@@ -1,0 +1,21 @@
+<form th:action="@{/employees}" th:object="${employee}" method="post">
+    <p>
+        <label>Employee ID:</label>
+        <input type="text" th:field="*{employeeId}" placeholder="Employee ID"/>
+    </p>
+    <p>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" placeholder="Name"/>
+    </p>
+    <p>
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" placeholder="Email"/>
+    </p>
+    <p>
+        <label>Location:</label>
+        <input type="text" th:field="*{location}" placeholder="Location"/>
+    </p>
+    <p>
+        <button type="submit">Save</button>
+    </p>
+</form>
